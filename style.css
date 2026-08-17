@@ -1,116 +1,331 @@
 * {
     box-sizing: border-box;
+
     margin: 0;
+
     padding: 0;
+
     font-family: Arial, sans-serif;
 }
 
+
 body {
+
     min-height: 100vh;
+
     display: flex;
+
     justify-content: center;
+
     align-items: center;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+
+
+    background-image:
+
+        linear-gradient(
+            rgba(0, 0, 0, 0.40),
+            rgba(0, 0, 0, 0.40)
+        ),
+
+        url("img/fondo1.jpg");
+
+
+    background-size: cover;
+
+    background-position: center;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
 }
+
+
+/*  CONTENEDOR TRANSPARENTE */
 
 .contenedor {
+
     width: 450px;
-    background-color: white;
+
+    max-width: 90%;
+
+
+    background: rgba(255, 255, 255, 0.18);
+
+
     padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+
+    border-radius: 20px;
+
+    border: 1px solid rgba(255, 255, 255, 0.35);
+
+
+    box-shadow:
+        0 10px 35px rgba(0, 0, 0, 0.40);
+
+
+    /* Efecto vidrio */
+
+    backdrop-filter: blur(12px);
+
+    -webkit-backdrop-filter: blur(12px);
+
 }
+
 
 h1 {
+
     text-align: center;
-    color: #333;
+
+    color: white;
+
     margin-bottom: 10px;
+
+    text-shadow:
+        1px 2px 4px rgba(0, 0, 0, 0.5);
+
 }
+
+
 
 .descripcion {
+
     text-align: center;
-    color: #777;
+
+    color: white;
+
     margin-bottom: 25px;
+
+    line-height: 1.5;
+
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.5);
+
 }
+
+
 
 .resultado {
+
     display: flex;
+
     gap: 8px;
+
     margin-bottom: 25px;
+
 }
+
 
 .resultado input {
+
     flex: 1;
+
     padding: 12px;
-    border: 2px solid #ddd;
+
+    border: 2px solid rgba(255, 255, 255, 0.5);
+
     border-radius: 8px;
+
     font-size: 16px;
+
+    outline: none;
+
+    background: rgba(255, 255, 255, 0.85);
+
+    color: #333;
+
 }
+
+
+.resultado input:focus {
+
+    border-color: white;
+
+}
+
+
 
 #copiar {
+
     border: none;
+
     padding: 0 15px;
+
     border-radius: 8px;
-    background-color: #555;
+
+    background: rgba(0, 0, 0, 0.55);
+
     color: white;
+
     cursor: pointer;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+
 }
+
 
 #copiar:hover {
-    background-color: #333;
+
+    background: rgba(0, 0, 0, 0.75);
+
 }
+
+
 
 .opciones {
+
     margin-bottom: 25px;
+
 }
+
 
 .fila {
+
     display: flex;
+
     justify-content: space-between;
+
     align-items: center;
+
     margin-bottom: 20px;
+
+    color: white;
+
+    font-weight: bold;
+
 }
+
 
 #longitud {
+
     width: 80px;
+
     padding: 8px;
-    border: 1px solid #ccc;
+
+    border: 1px solid rgba(255, 255, 255, 0.5);
+
     border-radius: 6px;
+
+    font-size: 15px;
+
+    background: rgba(255, 255, 255, 0.85);
+
 }
+
 
 .opcion {
+
     display: flex;
+
     align-items: center;
+
     gap: 10px;
+
     margin: 14px 0;
-    color: #444;
+
+    color: white;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.6);
+
 }
+
 
 .opcion input {
+
     width: 18px;
+
     height: 18px;
+
     cursor: pointer;
+
 }
+
 
 .generar {
+
     width: 100%;
+
     padding: 14px;
+
     border: none;
+
     border-radius: 8px;
-    background-color: #667eea;
+
+    background: rgba(102, 126, 234, 0.90);
+
     color: white;
+
     font-size: 17px;
+
     font-weight: bold;
+
     cursor: pointer;
+
+    transition: 0.3s;
+
 }
 
+
 .generar:hover {
-    background-color: #5568d8;
+
+    background: rgba(85, 104, 216, 1);
+
+    transform: scale(1.02);
+
 }
 
 #mensaje {
+
     text-align: center;
+
     margin-top: 15px;
-    color: #555;
+
+    color: white;
+
     font-size: 14px;
+
+    min-height: 20px;
+
+    font-weight: bold;
+
+    text-shadow:
+        1px 1px 3px rgba(0, 0, 0, 0.6);
+
+}
+
+
+@media (max-width: 500px) {
+
+    .contenedor {
+
+        padding: 20px;
+
+    }
+
+
+    h1 {
+
+        font-size: 24px;
+
+    }
+
+
+    .resultado {
+
+        flex-direction: column;
+
+    }
+
+
+    #copiar {
+
+        padding: 12px;
+
+    }
+
 }
